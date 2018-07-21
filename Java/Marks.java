@@ -9,18 +9,18 @@ class Marks
 		
 		//accepting the marks of all the subjects
 		System.out.print("Enter The Marks of 3 Subjects :: ");
-		double m1 = Double.parseDouble(in.readLine());
-		double m2 = Double.parseDouble(in.readLine());
-		double m3 = Double.parseDouble(in.readLine());
+		double marksA = Double.parseDouble(in.readLine());
+		double marksB = Double.parseDouble(in.readLine());
+		double marksC = Double.parseDouble(in.readLine());
 		
-		double sum = m1+m2+m3;
+		double sum = marksA+marksB+marksC;
 		
 		//declaring the after checking the respective conditions
-		if(m1>60 && m2>60 && m3>60)
+		if(marksA>60 && marksB>60 && marksC>60)
 			System.out.println("Passed");
-		if((m1>60 && m2>60) || (m2>60 && m3>60) || (m1>60 && m3>60))
+		if((marksA>60 && marksB>60) || (marksB>60 && marksC>60) || (marksA>60 && marksC>60))
 			System.out.println("Promoted");
-		if((m1<60 && m2<60) || (m2<60 && m3<60) || (m1<60 && m3<60) ||(m1<60 && m2<60 && m3<60))
+		if((marksA<60 && marksB<60) || (marksB<60 && marksC<60) || (marksA<60 && marksC<60) ||(marksA<60 && marksB<60 && marksC<60))
 			System.out.println("Failed");
 	}
 }
