@@ -1,0 +1,14 @@
+//Driver program for Employee class
+import java.io.*;
+public class EmployeeTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		//Accepting monthly basic salary
+		System.out.println("Enter The Monthly Basic :: ");
+		double monthlyBasic = Double.parseDouble(in.readLine());
+		
+	}
+}

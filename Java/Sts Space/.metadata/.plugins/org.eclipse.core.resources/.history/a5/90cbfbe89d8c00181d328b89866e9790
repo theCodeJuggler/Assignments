@@ -1,0 +1,19 @@
+//Driver program to test Television class
+import java.io.*;
+class TelevisionTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in  = new BufferedReader(new InputStreamReader(System.in));
+		
+		Television tv = new Television();
+		
+		do
+		{
+			if(tv.state==0)
+			{
+				System.out.println("hvhv");
+			}
+		}
+	}
+}

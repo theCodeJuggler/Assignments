@@ -1,0 +1,82 @@
+//Driver program to test Television class
+import java.io.*;
+class TelevisionTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in  = new BufferedReader(new InputStreamReader(System.in));
+		
+		Television tv = new Television();
+		int choice, volume, choiceVolume, channel;
+		do
+		{
+			
+			if(tv.state==0)
+			{
+				System.out.println("Press 1 to Switch Television set");
+				choice = Integer.parseInt(in.readLine());
+				tv.onOff();
+			}
+			else
+			{
+				//accept user choice
+				System.out.println("Press The Number To Choose Option.");
+				System.out.println("1. Switch Television OFF\n2. Increase Volume\n3. Decrease Volume\n4. Change Channel\n5. Get Information");
+				choice = Integer.parseInt(in.readLine());
+				
+				switch(choice)
+				{
+				case 1:
+					tv.onOff();
+					break;
+				
+				case 2:
+					choiceVolume = 0;
+					do
+					{
+						volume = tv.incrsVolume();
+						System.out.println("Press 1 to exit Volume mode \nPress 0 to continue increasing");
+						choiceVolume = Integer.parseInt(in.readLine());
+						System.out.println("Current Volume"+volume);
+					}
+					while(choiceVolume==0);
+					break;
+					
+				case 3:
+					choiceVolume = 0;
+					do
+					{
+						volume = tv.decrsVolume();
+						System.out.println("Press 1 to exit Volume mode \nPress 0 to continue decreasing");
+						choiceVolume = Integer.parseInt(in.readLine());
+						System.out.println("Current Volume"+volume);
+					}
+					while(choiceVolume==0);
+					break;
+					
+				case 4:
+					System.out.print("Enter The Channel Number ::");
+					channel = Integer.parseInt(in.readLine());
+					tv.chngChannel(channel);
+					break;
+					
+				case 5:
+					if(tv.state==0)
+						System.out.println("Television State :: OFF");
+					else
+					{
+						System.out.println("Television State :: ON");
+						System.out.println("Channel Number :: "+channel);
+						System.out.println("Current Volume :: "+volume);
+						
+					}
+					break;
+					
+				default:
+					System.out.println("No Such Options exists !!");
+				}
+			}
+		}
+		while();
+	}
+}

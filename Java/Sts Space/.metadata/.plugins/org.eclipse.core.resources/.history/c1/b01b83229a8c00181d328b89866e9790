@@ -1,0 +1,11 @@
+//Creating television set
+public class Television {
+
+	private int state;
+	private int currentVol;
+	private int currentChannel;
+	private int incrsVolume;
+	private int decrsVolume;
+	private int chngChannel;
+	
+}

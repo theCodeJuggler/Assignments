@@ -1,0 +1,38 @@
+//Creating television set
+public class Television {
+
+	int state;
+	private int currentVol;
+	private int currentChannel;
+	
+	//to increase the volume by 1
+	int incrsVolume()
+	{
+		currentVol+=1;
+		
+		return currentVol;
+	}
+	
+	//to decrease the volume by 1
+	int decrsVolume()
+	{
+		currentVol-=1;
+		
+		return currentVol;
+	}
+	
+	//to change the channel number
+	void chngChannel(int channel)
+	{
+		currentChannel = channel;
+	}
+	
+	void onOff()
+	{
+		if(state == 0)
+			state = 1;
+		else
+			state = 0;
+	}
+	
+}

@@ -1,0 +1,52 @@
+//Implementation of Triangle 
+public class Triangle {
+	
+	private double side1;
+	private double side2;
+	private double side3;
+	
+	Triangle(double side1, double side2, double side3)
+	{
+		this.side1 = side1;
+		this.side2 = side2;
+		this.side3 = side3;
+	}
+	
+	boolean isRight()
+	{
+		double hypotnuse;
+		
+		if(side1>side2 && side1>side3)
+		{
+			hypotnuse = side1;
+			
+			if((side1*side1) == (side2*side2+side3*side3))
+				return true;
+			else
+				return false;
+		}
+		else if(side2>side1 && side2>side3)
+		{
+			hypotnuse = side2;
+			
+			if((side2*side2) == (side1*side1+side3*side3))
+				return true;
+			else
+				return false;
+		}
+		else if (side3>side2 && side3>side1)
+		{
+			hypotnuse = side3;
+			
+			if((side3*side3) == (side2*side2+side1*side1))
+				return true;
+			else
+				return false;
+		}
+	}
+	
+	boolean isScalene()
+	{
+		if(side1 != side2 && side2 != side3)
+	}
+}

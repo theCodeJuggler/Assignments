@@ -1,0 +1,59 @@
+import java.io.*;
+//Tester program to test the Vehicle class
+public class VehicleTest {
+
+	public static void main(String args[])throws IOException
+	{
+		String direction;
+		
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.print("Enter Owner Name :: ");
+		String ownerName = in.readLine();
+		
+		Vehicle bmwX4 = new Vehicle(ownerName);
+		
+		System.out.print("Enter The Highest Vehicle Identification Number :: ");
+		bmwX4.setHighestVehicleIdentificationNumber(Integer.parseInt(in.readLine()));
+		
+		System.out.print("Enter The Vehicle Identification Number :: ");
+		bmwX4.setVehicleID(Integer.parseInt(in.readLine()));
+		
+		System.out.println("Press\n1. Change Speed\n2. Stop\n3. Turn by Degrees\n4. Turn by Direction\n5. Display Informations");
+		System.out.print("Enter Your Choice :: ");
+		int choice = Integer.parseInt(in.readLine());
+		
+		do {
+			switch(ch)
+			{
+			case 1:
+				System.out.print("Enter Speed :: ");
+				bmwX4.changeSpeed(Integer.parseInt(in.readLine()));
+				break;
+				
+			case 2:
+				bmwX4.stop();
+				break;
+				
+			case 3:
+				System.out.print("Enter Direction (left / right) : ");
+				String direction = in.readLine();
+				System.out.print("Enter Degrees : ");
+				double degrees = Double.parseDouble(in.readLine());
+				
+				bmwX4.turnByDegree(degrees, direction);
+				
+				break;
+				
+			case 4:
+				System.out.print("Enter Direction (left / right) : ");
+				String direction = in.readLine();
+				
+				bmwX4.turnByDirection(direction);
+			}
+		}
+		
+		
+		System.out.println();
+	}
+}

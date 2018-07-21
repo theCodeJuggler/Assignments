@@ -1,0 +1,24 @@
+public class Distance {
+	
+	int feet;
+	float inches;
+	
+	void set(int feet, float inches)
+	{
+		this.feet = feet;
+		this.inches = inches;
+	}
+	
+	void disp()
+	{
+		System.out.println(feet+" feet "+" inches");
+	}
+	
+	Distance add(Distance dist1, Distance dist2, Distance distSum)
+	{
+		distSum.feet = dist1.feet + dist2.feet;
+		distSum.inches = dist1.inches + dist2.inches;
+		
+		return distSum;
+	}
+}

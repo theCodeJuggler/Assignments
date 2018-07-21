@@ -1,0 +1,25 @@
+class Complex {
+	
+	float real;
+	float imaginary;
+	
+	void set(float rl, float im)
+	{
+		real = rl;
+		imaginary = im; 
+	}
+	
+	void display()
+	{
+		System.out.println(real+"+"+imaginary+"i");
+	}
+	
+	Complex sum(Complex cmplx1, Complex cmplx2, Complex resultCmplx)
+	{
+		resultCmplx.real = cmplx1.real + cmplx2.real;
+		resultCmplx.imaginary = cmplx1.imaginary + cmplx2.imaginary;
+		
+		return resultCmplx;
+		
+	}
+}

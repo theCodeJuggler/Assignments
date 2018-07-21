@@ -1,0 +1,21 @@
+import java.io.*;
+public class DistanceTest{
+	
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.print("Enter Feet and Inches for 1st Distance :: " );
+		int feet1 = Integer.parseInt(in.readLine());
+		float inches1 = Float.parseFloat(in.readLine());
+		
+		System.out.print("Enter Feet and Inches for 2nd Distance :: " );
+		int feet1 = Integer.parseInt(in.readLine());
+		float inches1 = Float.parseFloat(in.readLine());
+		
+		Distance distance1 = new Distance();
+		Distance distance2 = new Distance();
+		Distance distanceSum = new Distance();
+		
+	}
+}

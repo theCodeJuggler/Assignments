@@ -1,0 +1,40 @@
+//Class to implement Vehicle behaviors and properties
+class Vehicle {
+
+	private double currentSpeed;
+	private double currentDirection;
+	private String ownerName;
+	private static int highestVehicleIdentificationNumber;
+	private int vehicleID;
+	
+	Vehicle()
+	{
+	}
+	
+	Vehicle(String ownerName)
+	{
+		this.ownerName = ownerName;
+	}
+
+	public double getCurrentSpeed() {
+		return currentSpeed;
+	}
+
+	public void setCurrentSpeed(double currentSpeed) {
+		this.currentSpeed = currentSpeed;
+	}
+
+	public double getCurrentDirection() {
+		return currentDirection;
+	}
+
+	public void setCurrentDirection(double currentDirection) {
+		this.currentDirection = currentDirection;
+	}
+	
+	void changeSpeed(double speed)
+	{
+		this.currentSpeed = speed;
+	}
+	
+}

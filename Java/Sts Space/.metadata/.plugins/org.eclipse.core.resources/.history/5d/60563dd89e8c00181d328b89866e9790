@@ -1,0 +1,23 @@
+//Driver program to test Television class
+import java.io.*;
+class TelevisionTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in  = new BufferedReader(new InputStreamReader(System.in));
+		
+		Television tv = new Television();
+		
+		do
+		{
+			
+			if(tv.state==0)
+				System.out.println("Press 1 to Switch Television set");
+			else
+			{
+				System.out.println("Press The Number To Choose Option.");
+				System.out.println("1. Switch Television OFF\n2. Increase Volume\n3. Decrease Volume\n4. Change Channel");
+			}
+		}
+	}
+}

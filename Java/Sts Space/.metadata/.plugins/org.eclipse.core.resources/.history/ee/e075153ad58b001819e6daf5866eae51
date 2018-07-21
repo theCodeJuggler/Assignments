@@ -1,0 +1,15 @@
+import java.io.*;
+class Test {
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter The Length and Width of the 1st Rectangle ::");
+		double len1 = Double.parseDouble(in.readLine());
+		double wid1 = Double.parseDouble(in.readLine());
+		
+		System.out.println("Enter The Length and Width of the 2nd Rectangle ::");
+		double len2 = Double.parseDouble(in.readLine());
+		double wid2 = Double.parseDouble(in.readLine());
+	}
+}

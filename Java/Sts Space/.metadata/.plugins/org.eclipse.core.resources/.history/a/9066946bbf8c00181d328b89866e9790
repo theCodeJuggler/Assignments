@@ -1,0 +1,57 @@
+//Driver program to test the Country class
+import java.io.*;
+class CountryTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter The Number of Countries :: ");
+		int noOfCountries = Integer.parseInt(in.readLine());
+		
+		Country ar[] = new Country[noOfCountries];
+		
+		System.out.println("Enter The Following Informations:\nCountry Name\nPopulation\nArea");
+		for(int i=0;i<noOfCountries;i++)
+		{
+			System.out.println("Country "+(i+1));
+			ar[i] = new Country(in.readLine(), Integer.parseInt(in.readLine()), Double.parseDouble(in.readLine()));
+		}
+		
+		double max = ar[0].area;
+		int index = 0;
+		for(int i=1; i<noOfCountries; i++)
+		{
+			if(max<ar[i].area)
+			{
+				max = ar[i].area;
+				index = i;
+			}
+		}
+		System.out.println("Country With Largest Area ::  Country Name : "+ar[index].name+" Country Area : "+ar[index].area);
+		
+		max = ar[0].population;
+		index = 0;
+		for(int i=1; i<noOfCountries; i++)
+		{
+			if(max<ar[i].population)
+			{
+				max = ar[i].population;
+				index = i;
+			}
+		}
+		System.out.println("Country With Largest Population ::  Country Name : "+ar[index].name+" Country Population : "+ar[index].population);
+		
+		max = ar[0].population/ar[0].ar;
+		index = 0;
+		for(int i=1; i<noOfCountries; i++)
+		{
+			if(max<ar[i].population)
+			{
+				max = ar[i].population;
+				index = i;
+			}
+		}
+		System.out.println("Country With Largest Population Density ::  Country Name : "+ar[index].name+" Country Population Density : "+ar[index].population);
+	}
+}

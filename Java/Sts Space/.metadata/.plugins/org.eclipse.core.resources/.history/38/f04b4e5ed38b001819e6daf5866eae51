@@ -1,0 +1,28 @@
+class Rectangle {
+	double length;
+	double width;
+	
+	Rectangle(double l, double w)
+	{
+		length = this.l;
+		width = this.w;
+	}
+	
+	void area()
+	{
+		double area;
+		
+		ar=length*width;
+		
+		System.out.print("Area = "+ar);
+	}
+	
+	void perimeter()
+	{
+		double peri;
+		
+		peri = 2*(length+width);
+		
+		System.out.print("Perimeter = "+peri);
+	}
+}

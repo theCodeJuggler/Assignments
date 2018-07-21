@@ -1,0 +1,29 @@
+//Class to define country details
+class Country {
+
+	private String name;
+	private int population;
+	private double area;
+	
+	Country(String name, int population, double area)
+	{
+		this.name = name;
+		this.population = population;
+		this.area = area;
+	}
+	
+	String getName()
+	{
+		return name;
+	}
+	
+	int getPopulaton()
+	{
+		return population;
+	}
+	
+	double getArea()
+	{
+		return area;
+	}
+}

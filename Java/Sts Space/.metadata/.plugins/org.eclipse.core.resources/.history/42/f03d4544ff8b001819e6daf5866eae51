@@ -1,0 +1,36 @@
+//Program to accept distance in Feet and Inches and find out their sum and display them 
+public class Distance {
+	
+	int feet;
+	float inches;
+	
+	//Setter Function to set the instance variable from the inputed values.
+	void set(int feet, float inches)
+	{
+		this.feet = feet;
+		this.inches = inches;
+	}
+	
+	//Function to display both the input distances as well as the total distance 
+	void disp()
+	{
+		System.out.println(feet+" feet "+inches+" inches");
+	}
+	
+	//Function to add the distances in feet and inches separately
+	Distance add(Distance dist1, Distance dist2, Distance distSum)
+	{
+		distSum.feet = dist1.feet + dist2.feet; 		//adding the feet component of the distance 
+		distSum.inches = dist1.inches + dist2.inches; 	// adding the inches component of the distance.
+		
+		int copyInches;
+		if(distSum.inches>12)
+		{
+			copyInches = distSum.inches/12;
+			distSum.inches = distSum%12;
+			distSum.feet+=copyInches;
+		}
+		
+		return distSum;
+	}
+}

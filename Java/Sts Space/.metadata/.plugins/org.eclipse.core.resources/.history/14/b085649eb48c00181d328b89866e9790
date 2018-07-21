@@ -1,0 +1,27 @@
+//Driver program to test the Country class
+import java.io.*;
+class CountryTest {
+
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter The Number of Countries :: ");
+		int noOfCountries = Integer.parseInt(in.readLine());
+		
+		Country ar[] = new Country[noOfCountries];
+		
+		System.out.println("Enter The Following Informations:\nCountry Name\nPopulation\nArea");
+		for(int i=0;i<noOfCountries;i++)
+		{
+			ar[i].name = in.readLine();
+			ar[i].population = Integer.parseInt(in.readLine());
+			ar[i].area = Double.parseDouble(in.readLine());
+		}
+		
+		for(int i=0;i<noOfCountries;i++)
+		{
+			System.out.println(ar[i].name+" "+ar[i].population+" "+ar[i].area);
+		}
+	}
+}

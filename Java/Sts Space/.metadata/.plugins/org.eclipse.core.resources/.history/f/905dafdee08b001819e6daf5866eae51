@@ -1,0 +1,28 @@
+import java.io.*;
+public class ComplexTest {
+	public static void main(String args[])throws IOException
+	{
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.print("Enter The Real and Imaginary Numbers :: " );
+		float real1 = Float.parseFloat(in.readLine());
+		float imaginary1 = Float.parseFloat(in.readLine());
+		
+		System.out.print("Enter The Real and Imaginary Numbers :: " );
+		float real2 = Float.parseFloat(in.readLine());
+		float imaginary2 = Float.parseFloat(in.readLine());
+		
+		Complex complxno1 = new Complex();
+		Complex complxno2 = new Complex();
+		Complex resultCmplx = new Complex();
+		
+		complxno1.set(real1, imaginary1);
+		complxno2.set(real2, imaginary2);
+		
+		resultCmplx.sum(complxno1, complxno2, resultCmplx);
+		
+		complxno1.display();
+		complxno2.display();
+		
+	}
+}
