@@ -1,12 +1,16 @@
 //Wprogram6
+//Calculating tax according to tax slab
 import java.io.*;
 class Tax
 {
 	public static void main(String args[])throws IOException
 	{
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		//Acepting the salry from the user
 		System.out.print("Enter The CTC : ");	double ctc = Double.parseDouble(in.readLine());
 		
+		//calculating tax with respect to the slab for tax and displaying the corresponding tax amount
 		if(ctc<=0)
 			System.out.print("Invalid Input");
 		else if(ctc<=180000)
