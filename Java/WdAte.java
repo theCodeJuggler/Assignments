@@ -1,4 +1,5 @@
 //WProgram7
+//Input - 09,07,2010	Output - 09/July/2010
 import java.io.*;
 class WdAte
 {
@@ -6,23 +7,27 @@ class WdAte
 	{
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
+		//user input
 		System.out.print("Enter The Date : ");	String dt = in.readLine();
-		dt=dt+",";
+		
+		dt=dt+",";	//adding a trailing comma for the year part to be extracted
+		
 		int l=dt.length();
 		String st="";
 		char ch;
 		int cntr=0,m;
+		
 		for(int i=0;i<l;i++)
 		{
-			ch=dt.charAt(i);
-			if(ch!=',')
+			ch=dt.charAt(i);	//extracting the characters frm string of date
+			if(ch!=',')		//if comma is not encountered then the characters are accumulated in the string
 			{
 				st=st+ch;
 			}
-			else
+			else			//else the comma counter is incremented
 			{
 				cntr++;
-				if(cntr==2)
+				if(cntr==2)	//if comma counter is 2 the month is calculated in the word format and and displayed
 				{
 					m=Integer.parseInt(st);
 					switch(m)
@@ -69,7 +74,7 @@ class WdAte
 				{
 					System.out.print(st);
 				}
-				st="";
+				st="";	//initializing the string variable
 			}
 		}
 	}
