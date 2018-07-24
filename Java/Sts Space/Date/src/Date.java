@@ -1,6 +1,6 @@
+//Date class to implement the problem of calculating the date difference
 import java.time.LocalDate;
 import java.time.Period;
-
 public class Date {
 
 	//data members to store the day, month and year of a date
@@ -8,7 +8,7 @@ public class Date {
 	private int m;
 	private int y;
 
-	//to initialize the date objects
+	//to initialize the Date instance members
 	public Date(int d, int m, int y)
 	{
 		this.d = d;
@@ -31,7 +31,7 @@ public class Date {
 	}
 
 	// finds out the difference in dates and stores absolute values in as d,m,y in diffAr respectively
-	public int[] differenceFirstway(Date date)
+	public int[] diff(Date date)
 	{
 		int diffAr[] = new int[3];
 		LocalDate dateArg = LocalDate.of(date.y, date.m, date.d);
@@ -43,19 +43,7 @@ public class Date {
 
 		return diffAr;
 	}
-
-	public int[] differenceSecondWay(Date date) {
-		int diffAr[] = new int[3];
-		LocalDate dateArg = LocalDate.of(date.y, date.m, date.d);
-		LocalDate dateIns = LocalDate.of(y, m, d);
-		Period diff = Period.between(dateArg, dateIns);
-		diffAr[0] = (int) diff.getDays();
-		diffAr[1] = (int) (diff.getMonths());
-		diffAr[2] = (int) diff.getYears();
-
-		return diffAr;
-	}
-
+	
 	public int getD() {
 		return d;
 	}
