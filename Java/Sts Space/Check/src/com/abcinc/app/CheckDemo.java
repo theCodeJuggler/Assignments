@@ -1,5 +1,6 @@
 package com.abcinc.app;
 
+//Driver program to instantiate objects and call the functions
 public class CheckDemo {
 	
 	public static void main(String args[])
