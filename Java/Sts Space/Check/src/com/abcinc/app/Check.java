@@ -1,5 +1,6 @@
 package com.abcinc.app;
 
+//class to declare and initialize the required members and methods
 public class Check {
 
 	int dfltVar=1;
@@ -12,10 +13,9 @@ public class Check {
 		System.out.println("I am Disp()");
 	}
 
+	//method to retrieve the private instance member 
 	public int getPvtVar() {
 		return pvtVar;
 	}
 	
-	
-
 }
