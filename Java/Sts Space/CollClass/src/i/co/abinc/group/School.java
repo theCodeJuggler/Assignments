@@ -6,15 +6,14 @@ public class School {
 	private String name;
 	private String city;
 	private String school;
-	private String district;
+	private String schoolDistrict;
 	private String greatSchoolRanking;
 	
 	//Parameterized Constructors
-	public School(String name, String city, String school, String district, String greatSchoolRanking) {
+	public School(String name, String city, String schoolDistrict, String greatSchoolRanking) {
 		this.name = name;
 		this.city = city;
-		this.school = school;
-		this.district = district;
+		this.schoolDistrict = schoolDistrict;
 		this.greatSchoolRanking = greatSchoolRanking;
 	}
 
@@ -31,7 +30,7 @@ public class School {
 	}
 
 	public String getDistrict() {
-		return district;
+		return schoolDistrict;
 	}
 
 	public String getGreatSchoolRanking() {
