@@ -1,6 +1,8 @@
 package com.abinc.bank;
 
-public class SavingAccount implements Comparable<SavingAccount> {
+import java.io.Serializable;
+
+public class SavingAccount implements Serializable, Comparable<SavingAccount> {
 
 	//instance members
 	private double accBal;
