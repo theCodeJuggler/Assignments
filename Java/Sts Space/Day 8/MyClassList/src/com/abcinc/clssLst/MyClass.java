@@ -1,6 +1,8 @@
 package com.abcinc.clssLst;
 
-public class MyClass {
+import java.io.Serializable;
+
+public class MyClass implements Serializable {
 
 	private String ab;
 	private int av;
@@ -27,6 +29,12 @@ public class MyClass {
 
 	public void setAv(int av) {
 		this.av = av;
+	}
+
+	//displaying the output
+	@Override
+	public String toString() {
+		return "MyClass [ab=" + ab + ", av=" + av + "]";
 	}
 	
 	

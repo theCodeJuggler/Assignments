@@ -9,8 +9,9 @@ public class EmpWrite {
 
 	public static void main(String[] args)
 	{
-		Employee emp = new Employee("101", "Satyen", 50_000);
+		Employee emp = new Employee("101", "Satyen", 50_000);	//creating object
 		
+		//writing to file
 		try(FileOutputStream fos = new FileOutputStream("employee.txt");
 				ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 			
